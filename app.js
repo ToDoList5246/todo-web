@@ -2,6 +2,13 @@ const input = document.getElementById("input");
 const add = document.getElementById("add");
 const liste = document.getElementById("liste");
 
+// Ajouter une tâche en appuyant sur Entrée
+document.getElementById("input").addEventListener("keypress", function(e) {
+    if (e.key === "Enter") {
+        document.getElementById("add").click();
+    }
+});
+
 // Charger les tâches sauvegardées
 let taches = JSON.parse(localStorage.getItem("taches")) || [];
 
