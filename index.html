@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Ma Web App Moderne</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Ma Todo List</h1>
+
+    <div class="container">
+        <input id="input" type="text" placeholder="Nouvelle tâche...">
+        <button id="add">Ajouter</button>
+    </div>
+
+    <ul id="liste"></ul>
+
+    <script src="app.js"></script>
+
+    <script>
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("service-worker.js");
+}
+</script>
+
+
+    <p style="font-size: 12px; opacity: 0.6;">
+  <a href="https://www.flaticon.com/free-icons/clock" title="clock icons">
+    Clock icons created by Freepik - Flaticon
+  </a>
+</p>
+</body>
+</html>
